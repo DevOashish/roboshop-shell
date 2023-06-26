@@ -5,7 +5,7 @@ rabbitmq_appuser_password=$1
 
 if [ -z "$rabbitmq_appuser_password" ]; then
   echo Input MySQL Root Password Missing
-  exit
+  exit 1
 fi
 
 component=payment

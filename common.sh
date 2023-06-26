@@ -161,5 +161,4 @@ func_systemd_service
 
   func_systemd_service
 
-
-  }
+}
