@@ -12,8 +12,7 @@ print_head() {
 
  func_status_check() {
    if [ $1 -eq 0 ]; then
-
-  echo -e "\e[32msuccess\e[0m"
+    echo -e "\e[32msuccess\e[0m"
   else
    echo -e "\e[31mfailure\e[0m"
    echo "Refer the log file /tmp/rroboshop.log for more information"
@@ -45,7 +44,7 @@ print_head() {
      func_status_check $?
        
     print_head "Load Schema"
-    mysql -h mysql-dev.devoash.tech -uroot -p${mysql_root_password} < /app/schema/${component}.sql &>>$log_file
+    mysql -h mysql-dev.devoash.tech -uroot -p${mysql_root_password} < /app/schema/$shipping.sql &>>$log_file
     func_status_check $?
     
     fi
