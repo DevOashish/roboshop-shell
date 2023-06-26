@@ -14,7 +14,7 @@ func_status_check $?
 
 
 print_head "Update mongodb address"
-sudo sed -i -e 's|127.0.0.1|0.0.0.0|' /etc/mongod.conf
+sed -i -e 's|127.0.0.1|0.0.0.0|' /etc/mongod.conf &>>$log_file
 func_status_check $?
 
 
