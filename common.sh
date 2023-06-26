@@ -44,7 +44,7 @@ print_head() {
      func_status_check $?
        
     print_head "Load Schema"
-    mysql -h mysql-dev.devoash.tech -uroot -p${mysql_root_password} < /app/schema/$shipping.sql &>>$log_file
+    mysql -h mysql-dev.devoash.tech -uroot -p${mysql_root_password} < /app/schema/shipping.sql &>>$log_file
     func_status_check $?
     
     fi
